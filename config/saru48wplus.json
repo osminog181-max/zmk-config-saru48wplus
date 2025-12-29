@@ -63,7 +63,7 @@
       "name": "encoder",
       "identifier": "encoder",
       "compatible": "alps,ec11",
-      "label": "ENCODER"
+      "label": "KRUTILKA"
     }
   ]
 }
