@@ -24,21 +24,21 @@
             timeout-ms = <50>;
             key-positions = <24 25>;
             bindings = <&kp RET>;
-            layers = <DEFAULT>;
+            layers = <0>;
         };
 
         combo_bsp {
             timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <&kp BSPC>;
-            layers = <DEFAULT>;
+            layers = <0>;
         };
 
         combo_adj {
             timeout-ms = <50>;
             key-positions = <26 40>;
-            bindings = <&mo ADJUST>;
-            layers = <DEFAULT>;
+            bindings = <&mo 0>;
+            layers = <0>;
         };
     };
 
@@ -47,14 +47,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mo LOWER>, <&kp LWIN>;
+            bindings = <&mo 1>, <&kp LWIN>;
         };
 
         td1: Raise_RALT {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo RAISE>, <&kp RALT>;
+            bindings = <&mo 2>, <&kp RALT>;
         };
 
         td2: LALT_RGUI {
@@ -129,6 +129,13 @@
             #quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
         };
+
+        td11: layers_selector {
+            compatible = "zmk,behavior-tap-dance";
+            label = "layers_selector";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&to 1>, <&to 2>;
+        };
     };
 
     keymap {
@@ -136,10 +143,10 @@
 
         default_layer {
             bindings = <
-&kp ESC     &kp Q     &kp W     &kp E  &kp R      &kp T  &kp Y      &kp U  &kp I      &kp O    &kp P     &kp LBKT  &kp RBKT
-&kp TAB     &kp A     &kp S     &kp D  &kp F      &kp G  &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT   &kp BSLH
-&kp LSHIFT  &kp Z     &kp X     &kp C  &kp V      &kp B  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp UP    &kp BACKSPACE
-&kp LCTRL   &kp LWIN  &kp LALT         &kp ENTER         &kp SPACE         &tog 1     &kp DEL  &kp LEFT  &kp DOWN  &kp RIGHT
+&kp ESC     &kp Q     &kp W     &kp E  &kp R  &kp T  &kp Y      &kp U  &kp I      &kp O    &kp P          &kp LBKT  &kp RBKT
+&kp TAB     &kp A     &kp S     &kp D  &kp F  &kp G  &kp H      &kp J  &kp K      &kp L    &kp SEMI       &kp SQT   &kp BSLH
+&kp LSHIFT  &kp Z     &kp X     &kp C  &kp V  &kp B  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH       &none     &kp BACKSPACE
+&kp LCTRL   &kp LWIN  &kp LALT         &td11         &kp ENTER         &kp SPACE  &kp DEL  &kp RIGHT_ALT  &none     &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -147,10 +154,10 @@
 
         lower_layer {
             bindings = <
-&trans  &kp KP_DOT     &kp N7  &kp N8  &kp N9     &kp N0           &kp F1     &kp F2  &kp F3  &kp F4   &kp F5      &kp F6    &kp INSERT
-&trans  &kp KP_MINUS   &kp N4  &kp N5  &kp N6     &kp KP_ASTERISK  &kp F7     &kp F8  &kp F9  &kp F10  &kp F11     &kp F12   &kp HOME
-&trans  &kp KP_DIVIDE  &kp N1  &kp N2  &kp N3     &kp KP_PLUS      &kp N0     &kp N1  &kp N2  &kp N3   &kp KP_DOT  &kp UP    &kp END
-&trans  &trans         &trans          &kp ENTER                   &kp SPACE          &tog 0  &kp DEL  &kp LEFT    &kp DOWN  &kp RIGHT
+&trans  &kp KP_DOT     &kp N7  &kp N8  &kp N9  &kp N0           &kp F1  &kp F2  &kp F3  &kp F4   &kp F5    &kp F6    &kp INSERT
+&trans  &kp KP_MINUS   &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11   &kp F12   &kp HOME
+&trans  &kp KP_DIVIDE  &kp N1  &kp N2  &kp N3  &kp KP_PLUS      &none   &none   &none   &none    &none     &kp UP    &kp END
+&trans  &trans         &trans          &trans                   &trans          &trans  &kp DEL  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
@@ -170,24 +177,6 @@
 &kp LSHIFT  &td6      &td6          &td6          &td6       &td6    &none    &none   &none   &none    &kp BSLH   &none      &kp PG_DN
 &td2        &kp LWIN  &td4                        &kp SPACE          &kp RET          &none   &none    &none      &none      &none
             >;
-        };
-
-        adjust_layer {
-            // -----------------------------------------------------------------------------------------------------------------------------------
-            // |         |         |         |         |         |         |         |         |         |         |         |         | BT CLR  |
-            // |         |         |         |         |         |         |         |         |         |         |         |         |         |
-            // |         |         |         |         |         |         |         |         |         |         |         |         |         |
-            // |         |         |         |         |         |         |         |         |         |         |         |         |         |
-            // -----------------------------------------------------------------------------------------------------------------------------------
-
-            bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &bt BT_CLR
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none         &none  &none  &none  &none  &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp DOWN UP>;
         };
     };
 };
