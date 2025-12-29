@@ -162,13 +162,6 @@
         };
 
         blt_layer {
-            // -----------------------------------------------------------------------------------------------------------------------------------
-            // |   F1    |   F2    |   F3    |   F4    |   F5    |   F6    |   F7    |   F8    |   F9    |   F10   |   F11   |   F12   | BOOTLDR |
-            // |         |         | OUT-BLE | OUT-USB |         |         |         |         |         |         |    `    |    ~    |  PgUP   |
-            // | LSHIFT  |BT1/DISC |BT2/DISC |BT3/DISC |BT4/DISC |BT5/DISC |         |         |         |         |    \    |         |  PgDN   |
-            // |LALT/RWIN|  LWIN   |LCTRL/APP|         |  SPACE  |         | RETURN  |         |         |  XXXXX  |         |         |         |
-            // -----------------------------------------------------------------------------------------------------------------------------------
-
             bindings = <
 &none  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &bootloader
 &none  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
