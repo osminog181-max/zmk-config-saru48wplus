@@ -12,9 +12,8 @@
 /* Layers */
 
 #define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-#define ADJUST  3
+#define NUMPAD 1
+#define BLT 2
 
 / {
     combos {
