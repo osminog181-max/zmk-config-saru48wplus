@@ -41,48 +41,6 @@
     };
 
     behaviors {
-        td0: Lower_LGUI {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mo 1>, <&kp LWIN>;
-        };
-
-        td1: Raise_RALT {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 2>, <&kp RALT>;
-        };
-
-        td2: LALT_RGUI {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LALT>, <&kp RWIN>;
-        };
-
-        td3: LSFT_SysREQ {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LSHIFT>, <&kp SYSREQ>;
-        };
-
-        td4: LCTRL_APP {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LCTRL>, <&kp K_APP>;
-        };
-
-        td5: BSPC_DEL {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp BSPC>, <&kp DEL>;
-        };
-
         td6: BT0_DISC0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -163,10 +121,10 @@
 
         blt_layer {
             bindings = <
-&none  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &bootloader
-&none  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none         &trans         &none         &none  &none  &none  &none  &none
+&td6  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &bootloader
+&td7  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
+&td8  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
+&td9  &none  &none         &trans         &none         &none  &none  &none  &none  &none
             >;
         };
     };
