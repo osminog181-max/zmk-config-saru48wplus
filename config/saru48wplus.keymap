@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 /* Layers */
 
@@ -121,10 +122,10 @@
 
         blt_layer {
             bindings = <
-&td6  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &bootloader
-&td7  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
-&td8  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
-&td9  &none  &none         &trans         &none         &none  &none  &none  &none  &none
+&td6  &none         &none         &none  &none   &none  &none  &none  &none  &none  &none  &none  &bootloader
+&td7  &none         &none         &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
+&td8  &none         &none         &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
+&td9  &out OUT_BLE  &out OUT_USB         &trans         &none         &none  &none  &none  &none  &none
             >;
         };
     };
