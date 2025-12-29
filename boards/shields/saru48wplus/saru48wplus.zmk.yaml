@@ -4,6 +4,6 @@ name: SLBLabs Saru48W+
 type: shield
 url: TODO
 requires:
-  - nice_nano_v2
+  - nice_nano
 features:
   - encoder
