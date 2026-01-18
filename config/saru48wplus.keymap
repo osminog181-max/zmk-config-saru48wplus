@@ -123,7 +123,7 @@
 &trans  &kp KP_DOT     &kp N7  &kp N8  &kp N9  &kp N0           &kp F1      &kp F2  &kp F3  &kp F4   &kp F5    &kp F6    &kp INSERT
 &trans  &kp KP_MINUS   &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK  &kp F7      &kp F8  &kp F9  &kp F10  &kp F11   &kp F12   &kp HOME
 &trans  &kp KP_DIVIDE  &kp N1  &kp N2  &kp N3  &kp KP_PLUS      &kp K_CALC  &none   &none   &none    &none     &kp UP    &trans
-&trans  &trans         &trans          &to 2                    &trans              &trans  &kp DEL  &kp LEFT  &kp DOWN  &kp RIGHT
+&trans  &trans         &trans          &none                    &trans              &trans  &kp DEL  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
