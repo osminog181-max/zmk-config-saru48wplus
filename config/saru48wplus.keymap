@@ -131,10 +131,10 @@
 
         blt_layer {
             bindings = <
-&td6  &none         &none         &none  &none   &none  &none  &none  &none  &none  &none  &none  &bootloader
-&td7  &none         &none         &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
-&td8  &none         &none         &none  &none   &none  &none  &none  &none  &none  &none  &none  &none
-&td9  &out OUT_BLE  &out OUT_USB         &trans         &none         &none  &none  &none  &none  &none
+&td6  &none         &none         &none  &none   &none  &none  &none  &none  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE  &bootloader
+&td7  &none         &none         &none  &none   &none  &none  &none  &none  &none              &none            &none       &none
+&td8  &none         &none         &none  &none   &none  &none  &none  &none  &none              &none            &none       &none
+&td9  &out OUT_BLE  &out OUT_USB         &trans         &none         &none  &none              &none            &none       &none
             >;
         };
     };
