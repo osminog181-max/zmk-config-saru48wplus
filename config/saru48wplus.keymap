@@ -20,7 +20,7 @@
 
         combo_ret {
             timeout-ms = <50>;
-            key-positions = <24 25>;
+            key-positions = <25 24>;
             bindings = <&kp RET>;
             layers = <0>;
         };
@@ -37,6 +37,11 @@
             key-positions = <26 40>;
             bindings = <&mo 0>;
             layers = <0>;
+        };
+
+        CTRL_P {
+            bindings = <&kp LC(P)>;
+            key-positions = <1 2>;
         };
     };
 
