@@ -20,7 +20,7 @@
         compatible = "zmk,combos";
 
         CTRL_P {
-            bindings = <&kp LC(LS(P))>;
+            bindings = <&kp LC(P)>;
             key-positions = <1 3>;
         };
 
