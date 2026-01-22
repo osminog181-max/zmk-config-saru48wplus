@@ -18,27 +18,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_ret {
-            timeout-ms = <50>;
-            key-positions = <25 24>;
-            bindings = <&kp RET>;
-            layers = <0>;
-        };
-
-        combo_bsp {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp BSPC>;
-            layers = <0>;
-        };
-
-        combo_adj {
-            timeout-ms = <50>;
-            key-positions = <26 40>;
-            bindings = <&mo 0>;
-            layers = <0>;
-        };
-
         CTRL_P {
             bindings = <&kp LC(P)>;
             key-positions = <1 2>;
