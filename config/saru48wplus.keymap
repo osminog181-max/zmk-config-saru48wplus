@@ -33,6 +33,11 @@
             bindings = <&kp C_MUTE>;
             key-positions = <7 33>;
         };
+
+        to_num_layer {
+            bindings = <&to 1>;
+            key-positions = <12 48>;
+        };
     };
 
     behaviors {
