@@ -107,7 +107,7 @@
 &td6  &out OUT_TOG  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
 &td7  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &td8  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&td9  &trans        &trans          &trans          &trans          &trans  &trans  &trans  &trans  &trans
+&td9  &trans        &trans          &to 0           &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
