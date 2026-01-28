@@ -38,6 +38,16 @@
             bindings = <&to 1>;
             key-positions = <12 48>;
         };
+
+        vol_down {
+            bindings = <&kp C_VOLUME_DOWN>;
+            key-positions = <7 5>;
+        };
+
+        vol_up {
+            bindings = <&kp C_VOLUME_UP>;
+            key-positions = <9 7>;
+        };
     };
 
     behaviors {
